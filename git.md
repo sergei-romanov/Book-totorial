@@ -1,22 +1,23 @@
-**Установка, настройка, добавления ssh-ключей**
+**Git**
+
 Подробный видео гайд по установке https://www.youtube.com/watch?v=GsG5roSGha0&t=1s&ab_channel=KonstantinShibkov
 ```
 # windows
-https://git-scm.com
-
+  https://git-scm.com
+  
 # linux
-sudo apt install git-all
+  sudo apt install git-all
 
 # macOS
-git --version
+  git --version
 ```
 
-- настройка git
+- Настройка git
 ```
 # глобальные дефолтные параметры 
 git config --global user.name "Sergey Romanov"             
 git config --global user.email romanov.java@gmail.com
-git config --global core.editor "vim" сменить нано или другую поебень
+git config --global core.editor "vim" сменить нано или другую фигню
 
 # Параметры установки окончаний строк 
  # linux/mac
@@ -29,7 +30,7 @@ git config --global core.safecrlf warn
 # Установка отображения unicode
 git config --global core.quotepath off
 ```
-	- уровни настройки:
+- Уровни настройки:
 ```
 # параметры на всю систему
 --system 
@@ -42,7 +43,7 @@ git config --global core.quotepath off
 # для проекта
 --local(default)
 ```
-	- настройка .gitcofig
+- настройка .gitcofig
 ```
 # linux /home/sergey/.gitconfig 
 
@@ -63,7 +64,18 @@ git config --global core.quotepath off
   type = cat-file -t
   dump = cat-file -p
 ```
+**Git command**
 
+- Создание репозитория
+```
+# переходим в нужный каталог и создаем там репозиторий
+  git init
+
+# в гите создаем репозиторий и выполняем привязку
+  git init --initial-branch=main
+  git remote add origin http://gitlab.romanov.digital/sergei/tutorial-book.git
+  git push
+```
 - добавления ssh-ключей на github.com
 ```
 # Создание ssh-ключей
@@ -80,8 +92,7 @@ $ cat ~/.ssh/id_rsa.pub
 
 Добавьте ssh-ключ в аккаунт Github. https://github.com/settings/keys
 ```
-- gitignore
-  example
+- gitignore example
 ```
 # Ignore everything
 *
@@ -91,7 +102,7 @@ $ cat ~/.ssh/id_rsa.pub
 !.gitignore
 !*.foo
 ```
-standart
+standard file
 ```
 # Compiled class file
 *.class
@@ -116,13 +127,6 @@ standart
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-```
-
-**Git command**
-- Создание репозитория
-```
-# переходим в нужный каталог и создаем там репозиторий
-git init
 ```
 
 - добавление файлов в индекс
