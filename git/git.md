@@ -234,7 +234,7 @@ git restore nameFile
 git checkout nameFile1 nameFile2 
 
 # отмены индексации изменения (противоположность git add)
-git reset HEAD nameFile 
+git reset nameFile 
 
 # отмена последнего комита(однако он будет видет в истории ветки)
 git revert HEAD 
